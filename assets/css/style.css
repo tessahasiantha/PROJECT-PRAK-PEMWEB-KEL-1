@@ -1,0 +1,364 @@
+/* =================================
+   GENERAL
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f6fb;
+    color: #263247;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =================================
+   LOGIN AND REGISTER
+================================= */
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+
+    background: linear-gradient(
+        135deg,
+        #eaf0ff,
+        #f7f8fc
+    );
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+
+    background: white;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+}
+
+.brand-icon {
+    width: 55px;
+    height: 55px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: #3159a8;
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* =================================
+   MAIN LAYOUT
+================================= */
+
+.app-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =================================
+   SIDEBAR
+================================= */
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+
+    background: #243451;
+    color: white;
+
+    padding: 25px 17px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 8px 30px;
+}
+
+.sidebar-brand h5 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.sidebar-brand small {
+    color: #aebbd0;
+    font-size: 11px;
+}
+
+.sidebar-label {
+    margin: 20px 10px 10px;
+
+    color: #91a1ba;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 14px;
+    margin-bottom: 5px;
+
+    color: #d5deeb;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.sidebar-link span {
+    width: 20px;
+    font-size: 19px;
+    text-align: center;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background: #3c5b91;
+    color: white;
+}
+
+.logout-link {
+    color: #ffb5b5;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 25px 10px 0;
+
+    color: #aebbd0;
+    font-size: 11px;
+}
+
+.sidebar-footer p {
+    margin-top: 5px;
+}
+
+/* =================================
+   TOPBAR
+================================= */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.topbar {
+    min-height: 80px;
+
+    background: white;
+    border-bottom: 1px solid #e9edf4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-info strong,
+.admin-info small {
+    display: block;
+    font-size: 12px;
+}
+
+.admin-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #3159a8;
+    color: white;
+
+    display: grid;
+    place-items: center;
+
+    font-weight: bold;
+}
+
+/* =================================
+   PAGE CONTENT
+================================= */
+
+.page-content {
+    padding: 30px;
+    min-height: calc(100vh - 145px);
+}
+
+.page-footer {
+    padding: 15px 30px;
+
+    color: #8993a5;
+    font-size: 12px;
+
+    background: white;
+    border-top: 1px solid #e9edf4;
+}
+
+.page-footer p {
+    margin: 0;
+}
+
+/* =================================
+   CARDS
+================================= */
+
+.content-card,
+.stat-card {
+    background: white;
+
+    padding: 24px;
+
+    border-radius: 13px;
+    border: 1px solid #e8ecf3;
+
+    box-shadow: 0 4px 15px rgba(25, 42, 70, 0.04);
+}
+
+.stat-card {
+    min-height: 140px;
+}
+
+.stat-card h2 {
+    color: #3159a8;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.form-card {
+    max-width: 900px;
+}
+
+/* =================================
+   FORM
+================================= */
+
+.form-control,
+.form-select {
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #3159a8;
+    box-shadow: 0 0 0 0.2rem rgba(49, 89, 168, 0.12);
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* =================================
+   TABLE
+================================= */
+
+.table thead th {
+    background: #f7f8fc;
+    color: #65728a;
+
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.table td {
+    font-size: 13px;
+}
+
+.table tbody tr:hover {
+    background: #f8faff;
+}
+
+/* =================================
+   BUTTON
+================================= */
+
+.btn {
+    border-radius: 8px;
+    padding: 8px 14px;
+}
+
+.btn-primary {
+    background: #3159a8;
+    border-color: #3159a8;
+}
+
+.btn-primary:hover {
+    background: #244783;
+    border-color: #244783;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    .app-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        padding: 15px;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .sidebar-link {
+        display: inline-flex;
+        width: auto;
+        margin-right: 3px;
+    }
+
+    .topbar {
+        padding: 15px;
+    }
+
+    .page-content {
+        padding: 18px;
+    }
+
+    .login-card {
+        padding: 25px;
+    }
+
+}
