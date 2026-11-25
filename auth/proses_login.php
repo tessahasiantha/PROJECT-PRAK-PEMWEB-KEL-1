@@ -27,9 +27,37 @@ if ($user && password_verify($password, $user["password"])) {
     $_SESSION["user_id"] = $user["id"];
     $_SESSION["username"] = $user["username"];
 
+    // Cookie untuk mengingat username selama 30 hari
+    if (isset($_POST["remember_username"])) {
+
+        setcookie(
+            "remember_username",
+            $username,
+            [
+                "expires" => time() + (30 * 24 * 60 * 60),
+                "path" => "/",
+                "httponly" => true,
+                "samesite" => "Lax"
+            ]
+        );
+
+    } else {
+
+        // Hapus Cookie jika pilihan tidak dicentang
+        setcookie(
+            "remember_username",
+            "",
+            [
+                "expires" => time() - 3600,
+                "path" => "/",
+                "httponly" => true,
+                "samesite" => "Lax"
+            ]
+        );
+    }
+
     header("Location: ../dashboard/index.php");
     exit;
-
 }
 
 $_SESSION["login_error"] = "Username atau password salah.";
